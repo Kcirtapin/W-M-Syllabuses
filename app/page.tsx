@@ -1,12 +1,11 @@
-// Type definition that helps manage metadata
 import type { Metadata } from 'next'
- 
-// Defines some metadata, e.g. sets title
+import Syllabus from './Syllabus';
+
 export const metadata: Metadata = {
   title: 'William & Mary Syllabus Repository',
 }
  
-// Creates functional component Page
+
 export default function Page() {
   return (
     <div>
@@ -16,11 +15,14 @@ export default function Page() {
         <link rel="icon" href="/favicon.ico" />
       </>
       <main className='bg-white px-10'>
-        <section>
-          <nav className='flex justify-between'>
-            <h1>Syllabuses for the College of William & Mary</h1>
-          </nav>
-        </section>
+        <h1 className='text-5xl text-center'>William & Mary Syllabus Repository</h1>
+        <div>
+          <ul>
+            <li>
+              <Syllabus link='./syllabuses/CSCI_243_Spring_2025_Davis.pdf'/>
+            </li>
+          </ul>
+        </div>
       </main>
     </div>
   );
